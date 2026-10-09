@@ -1,0 +1,129 @@
+{
+ "version": 1,
+ "author": "reaction-signature",
+ "editor": "wokwi",
+ "parts": [
+  {
+   "type": "wokwi-arduino-uno",
+   "id": "uno",
+   "top": 0,
+   "left": 0,
+   "attrs": {}
+  },
+  {
+   "type": "wokwi-lcd1602",
+   "id": "lcd1",
+   "top": -170,
+   "left": 10,
+   "attrs": {
+    "pins": "i2c"
+   }
+  },
+  {
+   "type": "wokwi-pushbutton",
+   "id": "btn1",
+   "top": 230,
+   "left": -120,
+   "attrs": {
+    "color": "green"
+   }
+  },
+  {
+   "type": "wokwi-led",
+   "id": "led1",
+   "top": -150,
+   "left": 290,
+   "attrs": {
+    "color": "yellow"
+   }
+  },
+  {
+   "type": "wokwi-resistor",
+   "id": "r1",
+   "top": -60,
+   "left": 280,
+   "rotate": 90,
+   "attrs": {
+    "value": "220"
+   }
+  },
+  {
+   "type": "wokwi-pushbutton",
+   "id": "btn2",
+   "top": 230,
+   "left": -30,
+   "attrs": {
+    "color": "red"
+   }
+  }
+ ],
+ "connections": [
+  [
+   "lcd1:GND",
+   "uno:GND.1",
+   "black",
+   []
+  ],
+  [
+   "lcd1:VCC",
+   "uno:5V",
+   "red",
+   []
+  ],
+  [
+   "lcd1:SDA",
+   "uno:A4",
+   "green",
+   []
+  ],
+  [
+   "lcd1:SCL",
+   "uno:A5",
+   "purple",
+   []
+  ],
+  [
+   "btn1:1.l",
+   "uno:2",
+   "green",
+   []
+  ],
+  [
+   "btn1:2.l",
+   "uno:GND.2",
+   "black",
+   []
+  ],
+  [
+   "uno:8",
+   "r1:1",
+   "gold",
+   []
+  ],
+  [
+   "r1:2",
+   "led1:A",
+   "gold",
+   []
+  ],
+  [
+   "led1:C",
+   "uno:GND.1",
+   "black",
+   []
+  ],
+  [
+   "btn2:1.l",
+   "uno:3",
+   "red",
+   []
+  ],
+  [
+   "btn2:2.l",
+   "uno:GND.2",
+   "black",
+   []
+  ]
+ ],
+ "dependencies": {}
+}
